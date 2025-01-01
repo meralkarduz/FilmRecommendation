@@ -24,7 +24,7 @@ This is a Django-based web application for recommending films. It uses Plotly fo
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/hakan-kirik/filmRecommendation.git
+   git clone https://github.com/meralkarduz/FilmRecommendation
    cd film-recommendation-system
    ```
 
