@@ -1,0 +1,71 @@
+<!-- filepath: /c:/Users/hakan.kirikl/PycharmProjects/FilmRecommendation/FilmRecommendationSystem/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #loading {
+            display: flex;
+            position: fixed;
+            font-size: xx-large;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            visibility: hidden;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: whitesmoke;
+            padding: 3rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .btn-custom {
+            margin: .5rem 0;
+            border-radius: 100px !important;
+            padding: .5rem 1rem;
+        }
+    </style>
+    <script>
+        function showLoading() {
+            document.getElementById('loading').style.visibility = 'visible';
+        }
+    </script>
+</head>
+<body>
+    <div class="container text-center">
+        <h2 class="mb-4">Welcome to the Movie Recommendation System!</h2>
+        <div class="btn-group-vertical">
+            <button class="btn btn-primary btn-custom" onclick="showLoading(); window.location.href='/question1/'">Question 1: Distribution of Ratings</button>
+            <button class="btn btn-primary btn-custom" onclick="showLoading(); window.location.href='/question2/'">Question 2: Top 10 Most Rated Movies</button>
+            <button class="btn btn-primary btn-custom" onclick="showLoading(); window.location.href='/question3/'">Question 3: Average Rating per Movie</button>
+            <button class="btn btn-primary btn-custom" onclick="showLoading(); window.location.href='/question4/'">Question 4: Number of Ratings per User</button>
+            <button class="btn btn-primary btn-custom" onclick="showLoading(); window.location.href='/question5/'">Question 5: Top 10 Highest Rated Movies</button>
+            <button class="btn btn-success btn-custom mt-3" onclick="showLoading(); window.location.href='/train_model/'">Train Model</button>
+        </div>
+        <form action="/recommend_movies/" method="get" onsubmit="showLoading()" class="mt-4">
+            <div class="form-group">
+                <label for="user_id">Enter User ID for Recommendations:</label>
+                <input type="text" id="user_id" name="user_id" class="form-control" style="max-width: 300px; margin: 0 auto; border-radius: 100px;">
+            </div>
+            <input type="submit" value="Get Recommendations" class="btn btn-primary btn-custom">
+        </form>
+        <div id="loading">Processing, please wait...</div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

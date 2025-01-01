@@ -1,0 +1,63 @@
+<!-- filepath: /c:/Users/hakan.kirikl/PycharmProjects/FilmRecommendation/FilmRecommendationSystem/templates/error.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        #loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: #000;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: whitesmoke;
+            padding: 3rem 1rem;
+            border-radius: 1rem;
+        }
+
+        .btn-custom {
+            margin: .5rem 0;
+            border-radius: 100px !important;
+            padding: .5rem 1rem;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            text-align: start;
+        }
+
+        .card {
+            padding: 1rem;
+            margin: 2rem 0 1rem 0;
+            border-radius: 1rem;
+        }
+
+        p {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h2>Error</h2>
+        <div class="card">
+            <p>{{ message }}</p>
+        </div>
+        <button class="btn btn-primary btn-custom" onclick="window.location.href='/'">Back to Home</button>
+    </div>
+</body>
+</html>
