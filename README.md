@@ -95,6 +95,7 @@ This project implements a scalable movie recommendation system using collaborati
    - **Root Mean Square Error (RMSE)**:
      - Measures prediction accuracy.
      - Lower RMSE indicates better model performance.
+     - Root-mean-square error = 0.7249733074249952
 
 ---
 
